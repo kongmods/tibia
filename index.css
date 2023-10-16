@@ -32,11 +32,11 @@ label[for="covenant0"] { display: none; }
 	display: flex;
 	align-items: center; /* Center vertically */
 	cursor: pointer; /* Show the pointer cursor to indicate it's clickable */
+	width: max-content; /* Make it so the label doesn't extend beyond text */
 }
 
 /* Covenant Labels: Space between the image and text */
 .tab-label img { margin-right: 10px; } 
-
 
 
 
@@ -68,6 +68,7 @@ html {
 	font-family: Arial, sans-serif;
 	line-height: 8px;
 	margin-left: 10px;
+	cursor: pointer; /* Show the pointer cursor to indicate it's clickable */
 	}
 
 .titleL {
