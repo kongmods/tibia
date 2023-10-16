@@ -1,0 +1,333 @@
+@charset "UTF-8";
+/* CSS Document */
+
+input { display: none; }                				/* hide radio buttons */
+input + label { display: inline-block }		 	/* show labels in line */
+input ~ .tab { display: none }          			/* hide contents */		
+#tab1:checked ~ .tab.content1,					/* show contents only for selected tab */
+#tab2:checked ~ .tab.content2,
+#tab3:checked ~ .tab.content3,
+#tab4:checked ~ .tab.content4,
+#tab5:checked ~ .tab.content5,
+#tab6:checked ~ .tab.content6 { display: block; }
+#tab7:checked ~ .tab.content7 { display: block; }
+
+/* Hide the 'covenant0' label */
+/* This is because the first tab is always open by default  */
+/* Thus we made a 0-tab which we then disappear quietly  */
+label[for="covenant0"] { display: none; }
+
+/* show contents only for selected tab */
+#covenant1:checked ~ .tab.covenant0,
+#covenant1:checked ~ .tab.covenant1,
+#covenant2:checked ~ .tab.covenant2,
+#covenant3:checked ~ .tab.covenant3,
+#covenant4:checked ~ .tab.covenant4,
+#covenant5:checked ~ .tab.covenant5,
+#covenant6:checked ~ .tab.covenant6 { display: block; }
+
+
+/* Covenant Labels: Align the image and text in the labels */
+.tab-label {
+	display: flex;
+	align-items: center; /* Center vertically */
+	cursor: pointer; /* Show the pointer cursor to indicate it's clickable */
+}
+
+/* Covenant Labels: Space between the image and text */
+.tab-label img { margin-right: 10px; } 
+
+
+
+
+/* Covenants tabs, background highlight graphics */
+div#box {
+    width: 550px;
+    background-color: #222222;
+    margin: 0 auto; /* Center horizontally with no vertical margin */
+    padding: 20px 25px; 
+}
+
+
+
+
+
+
+/* Original below, needs cleanup */
+
+
+
+
+
+html {
+    overflow-y: scroll;
+}
+
+.title {
+	font-size: 18px;
+	font-family: Arial, sans-serif;
+	line-height: 8px;
+	margin-left: 10px;
+	}
+
+.titleL {
+	font-size: 18px;
+	font-family: Arial, sans-serif;
+	line-height: 14px;
+	margin-left: 10px;
+	text-align: left;
+	}
+
+.text {
+	font-size: 16px;
+	font-family: arial;
+	letter-spacing: 1px;
+	}
+
+.content {
+	font-size: 14px;
+	font-family: arial;
+	letter-spacing: 1px;
+	text-align: left;
+	margin-left: 104px;
+	margin-right: 104px;
+	}
+
+.contentc {
+	font-size: 14px;
+	font-family: arial;
+	letter-spacing: 1px;
+	text-align: center;
+	margin-left: 80px;
+	margin-right: 80px;
+	}
+
+.contentcov {
+	font-size: 14px;
+	font-family: arial;
+	letter-spacing: 1px;
+	text-align: left;
+	margin-left: -10px;
+	margin-right: -10px;
+	}
+
+.statues {
+	margin-left: 170px;
+	margin-right: 20px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	float: left;
+	}
+
+.statues1st {
+	margin-left: 96px;
+	margin-right: 20px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	float: left;
+	}
+
+.statues2nd {
+	margin-left: 0px;
+	margin-right: 20px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	float: left;
+	}
+
+.news {
+	margin-left: 70px;
+	margin-right:70px;
+	margin-top:0px;
+	margin-bottom:40px;
+	}
+
+.scrolls {
+	margin-left: 80px;
+	margin-right: 5px;
+	margin-top: 10px;
+	margin-bottom: 5px;
+	}
+
+.scrollsno {
+	margin-left: 0px;
+	}
+
+.bloodgrail {
+	margin-left: 170px;
+	margin-right:30px;
+	margin-top:0px;
+	margin-bottom:40px;
+	}
+
+.monsterbutt {
+	margin-left: 80px;
+	margin-right:0px;
+	margin-top:0px;
+	margin-bottom:0px;
+	}
+
+.disclaimer {
+	font-size: 11px;
+	font-family: arial;
+	letter-spacing: 1px;
+	text-align: right;
+	margin-right: 25px;
+	}
+
+.whisper {
+	font-size: 10px;
+	font-family: arial;
+	letter-spacing: 1px;
+	text-align: right;
+	margin-right: 130px;
+	margin-top: -4px;
+	}
+
+.whisper2 {
+	font-size: 10px;
+	font-family: arial;
+	letter-spacing: 1px;
+	text-align: right;
+	margin-right: 165px;
+	margin-top: -6px;
+	}
+
+.disclaimerblood {
+	font-size: 10px;
+	font-family: arial;
+	letter-spacing: 1px;
+	text-align: right;
+	margin-right: 120px;
+	margin-top: -12px;
+	}
+
+.disclaimerblood2 {
+	font-size: 10px;
+	font-family: arial;
+	letter-spacing: 1px;
+	text-align: right;
+	margin-right: 100px;
+	margin-top: -11px;
+	z-index:1;
+	}
+
+.disclaimerlist {
+	font-size: 12px;
+	font-family: arial;
+	letter-spacing: 1px;
+	text-align: center;
+	}
+	
+.space {
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-top: 20px;
+	margin-bottom: 2px;
+	}
+
+
+
+
+span.blood 
+	{ color:#990000;	}
+
+span.white 
+	{ color:#e6e6e6;	}
+
+span.craft 
+	{ color:#b37400;	}
+
+span.unique 
+	{ color:#ad835a;	}
+
+span.magic 
+	{ color:#4850B8;	}
+
+* {
+	margin:0px;
+	padding:0px;
+	font-smooth: never;
+	-webkit-font-smoothing: none;
+	}
+	
+h1 {
+	font-size: 22px;
+	font-family: tahoma;
+	font-weight:normal;
+	clear:both;
+	letter-spacing: 1px;
+	}
+
+h2 {
+	font-size: 18px;
+	font-family: tahoma;
+	font-weight:normal;
+	clear:both;
+	letter-spacing: 1px;
+	}
+
+body {
+	background-color: #000;
+	background-image:url(gfx/bglarge21.gif);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 400px;
+	color:#c1b492;	
+	}
+
+#borderontop
+{
+	background-image: url(random-gfx/skele.png);
+	background-repeat: no-repeat;
+	background-position: top center;
+}
+
+#borderinside
+{
+	background-image:url(gfx/borders/border-topleft.png), 
+								url(gfx/borders/border-topleft.png), 
+								url(gfx/borders/border-left.png), 
+								url(gfx/borders/border-right.png), 
+								url(gfx/borders/border-top.png), 
+								url(gfx/borders/border-bottom.png);
+	background-repeat: repeat-x, repeat-x, repeat-y, repeat-y, repeat-x, repeat-x;
+	background-position: top left, bottom left, top left, top right, top, bottom;
+}
+
+
+a { text-decoration: none; }
+a:link { color: #CCCCFF; }
+a:visited { color: #9999FF; }
+a:hover, a:active { color: #FFFFFF; }
+
+#navbar {
+	background-color:#101010;
+	background-image: url(holygrail/gfx/bg-alt2.jpg);
+	width:800px;
+	height:auto;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:-40px;
+	box-shadow:black 0px 5px 10px;
+	text-align:center;
+	padding-top:0px;
+	
+	}
+	
+h6 {
+	font-size:9px;
+	}
+	
+#navline {
+	font-size:13px;
+	letter-spacing:8px;
+	margin-bottom:20px;
+	}
+
+
+
+
+
+
