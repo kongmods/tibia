@@ -12,6 +12,24 @@ input ~ .tab { display: none }          			/* hide contents */
 #tab6:checked ~ .tab.content6 { display: block; }
 #tab7:checked ~ .tab.content7 { display: block; }
 
+/* Show contents only for selected quest tab */
+#quests1:checked ~ .tab.quests0,
+#quests2:checked ~ .tab.quests1,
+#quests3:checked ~ .tab.quests2,
+#quests4:checked ~ .tab.quests3,
+#quests5:checked ~ .tab.quests4,
+#quests6:checked ~ .tab.quests5,
+#quests7:checked ~ .tab.quests6 { display: block; }
+
+/* Show contents only for selected scope/feature tab */
+#features1:checked ~ .tab.features0,
+#features2:checked ~ .tab.features1,
+#features3:checked ~ .tab.features2,
+#features4:checked ~ .tab.features3,
+#features5:checked ~ .tab.features4,
+#features6:checked ~ .tab.features5,
+#features7:checked ~ .tab.features6 { display: block; }
+
 /* Hide the 'covenant0' label */
 /* This is because the first tab is always open by default  */
 /* Thus we made a 0-tab which we then disappear quietly  */
@@ -33,21 +51,69 @@ label[for="covenant0"] { display: none; }
 	align-items: center; /* Center vertically */
 	cursor: pointer; /* Show the pointer cursor to indicate it's clickable */
 	width: max-content; /* Make it so the label doesn't extend beyond text */
+	height: 25px;
 }
 
 /* Covenant Labels: Space between the image and text */
-.tab-label img { margin-right: 10px; } 
+.tab-label img { 
+	margin-right: 10px; 
+} 
+
+/* Covenant Labels: Makes it so you can't click outside the label (towards the left) */
+.spacer {
+	float: left;
+    height: 1px; /* Set the height to avoid extra spacing */
+    pointer-events: none; /* Makes it non-clickable */
+	margin-left: 170px;
+}
+
+/* Covenant Labels: Same as above but for double statues */
+.spacer2nd {
+	float: left;
+    height: 1px; /* Set the height to avoid extra spacing */
+    pointer-events: none; /* Makes it non-clickable */
+	margin-left: 96px;
+}
+
+/* Covenant Labels: Adds space between the covenants (to reduce linebreak spam) */
+.spacerbetween {
+    height: 75px; /* Set the height to avoid extra spacing */
+    pointer-events: none; /* Makes it non-clickable */
+}
+
+/* General spacer for all pages*/
+.spacerhalf {
+    height: 36px; /* Set the height to avoid extra spacing */
+    pointer-events: none; /* Makes it non-clickable */
+}
+
+/* General spacer for all pages*/
+.spacer30 {
+    height: 30px; /* Set the height to avoid extra spacing */
+    pointer-events: none; /* Makes it non-clickable */
+}
 
 
-
-/* Covenants tabs, background highlight graphics */
+/* Covenants tabs (opened), background highlight graphics */
 div#box {
     width: 550px;
     background-color: #222222;
     margin: 0 auto; /* Center horizontally with no vertical margin */
     padding: 20px 25px; 
+	margin-bottom: 45px;
+	margin-top: -35px;
 }
 
+/* Used for Content Scope */
+div#shortbox {
+    width: 400px;
+    background-color: #222222;
+    margin: 0 auto; /* Center horizontally with no vertical margin */
+    padding: 20px 25px; 
+	margin-bottom: 25px;
+	margin-top: -15px;
+	text-align: left;
+}
 
 
 
@@ -79,10 +145,24 @@ html {
 	text-align: left;
 	}
 
-.text {
-	font-size: 16px;
-	font-family: arial;
+.text14 {
+	font-size: 14px;
+	font-family: tahoma;
 	letter-spacing: 1px;
+	}
+
+.text {
+	font-size: 13px;
+	font-family: tahoma;
+	letter-spacing: 1px;
+	}
+
+.textL {
+	font-size: 13px;
+	font-family: tahoma;
+	letter-spacing: 0.5px;
+	text-align: left;
+	margin-left: 20px;
 	}
 
 .content {
@@ -112,8 +192,12 @@ html {
 	margin-right: -10px;
 	}
 
+.symbol { 
+	vertical-align: middle; 
+	}
+
 .statues {
-	margin-left: 170px;
+	margin-left: 0px;
 	margin-right: 20px;
 	margin-top: 20px;
 	margin-bottom: 20px;
@@ -121,7 +205,7 @@ html {
 	}
 
 .statues1st {
-	margin-left: 96px;
+	margin-left: 0px;
 	margin-right: 20px;
 	margin-top: 20px;
 	margin-bottom: 20px;
