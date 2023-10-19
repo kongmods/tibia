@@ -13,13 +13,13 @@ input ~ .tab { display: none }          			/* hide contents */
 #tab7:checked ~ .tab.content7 { display: block; }
 
 /* Show contents only for selected quest tab */
-#quests1:checked ~ .tab.quests0,
-#quests2:checked ~ .tab.quests1,
-#quests3:checked ~ .tab.quests2,
-#quests4:checked ~ .tab.quests3,
-#quests5:checked ~ .tab.quests4,
-#quests6:checked ~ .tab.quests5,
-#quests7:checked ~ .tab.quests6 { display: block; }
+#quest1:checked ~ .tab.quest0,
+#quest2:checked ~ .tab.quest1,
+#quest3:checked ~ .tab.quest2,
+#quest4:checked ~ .tab.quest3,
+#quest5:checked ~ .tab.quest4,
+#quest6:checked ~ .tab.quest5,
+#quest7:checked ~ .tab.quest6 { display: block; }
 
 /* Show contents only for selected scope/feature tab */
 #features1:checked ~ .tab.features0,
@@ -29,6 +29,7 @@ input ~ .tab { display: none }          			/* hide contents */
 #features5:checked ~ .tab.features4,
 #features6:checked ~ .tab.features5,
 #features7:checked ~ .tab.features6 { display: block; }
+
 
 /* Hide the 'covenant0' label */
 /* This is because the first tab is always open by default  */
@@ -115,6 +116,16 @@ div#shortbox {
 	text-align: left;
 }
 
+/* Used for Quest page */
+div#questbox {
+    width: 500px;
+    background-color: #222222;
+    margin: 0 auto; /* Center horizontally with no vertical margin */
+    padding: 20px 25px; 
+	margin-bottom: 25px;
+	margin-top: -15px;
+	text-align: left;
+}
 
 
 
@@ -163,6 +174,14 @@ html {
 	letter-spacing: 0.5px;
 	text-align: left;
 	margin-left: 20px;
+	}
+
+.textQ {
+	font-size: 13px;
+	font-family: tahoma;
+	letter-spacing: 0.5px;
+	text-align: left;
+	margin-left: 10px;
 	}
 
 .content {
