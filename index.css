@@ -348,6 +348,23 @@ span.unique
 span.magic 
 	{ color:#4850B8;	}
 
+span.green { 
+	color:#00f000;	
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;    /* 1 pixel black shadow to left, top, right and bottom */
+	font-family: verdana;
+	font-size: 12px;
+}
+
+span.blue { 
+	color:#3ef6f4;	
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;    /* 1 pixel black shadow to left, top, right and bottom */
+	font-family: verdana;
+	font-size: 12px;
+}
+
+
+
+
 * {
 	margin:0px;
 	padding:0px;
