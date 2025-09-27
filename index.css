@@ -21,6 +21,15 @@ input ~ .tab { display: none }          			/* hide contents */
 #quest6:checked ~ .tab.quest5,
 #quest7:checked ~ .tab.quest6 { display: block; }
 
+/* Show contents only for selected quest tab */
+#chapter1:checked ~ .tab.chapter0,
+#chapter2:checked ~ .tab.chapter1,
+#chapter3:checked ~ .tab.chapter2,
+#chapter4:checked ~ .tab.chapter3,
+#chapter5:checked ~ .tab.chapter4,
+#chapter6:checked ~ .tab.chapter5,
+#chapter7:checked ~ .tab.chapter6 { display: block; }
+
 /* Show contents only for selected scope/feature tab */
 #features1:checked ~ .tab.features0,
 #features2:checked ~ .tab.features1,
@@ -125,6 +134,7 @@ div#questbox {
 	margin-bottom: 25px;
 	margin-top: -15px;
 	text-align: left;
+/*	background-image: url(gfx/background/npc.webp);        Unused for now, tibia-esque background image */
 }
 
 
@@ -153,6 +163,14 @@ html {
 	font-family: Arial, sans-serif;
 	line-height: 14px;
 	margin-left: 10px;
+	text-align: left;
+	}
+
+.titleLore {
+	font-size: 19px;
+	font-family: Arial, sans-serif;
+	line-height: 14px;
+	margin-left: 0px;
 	text-align: left;
 	}
 
@@ -333,26 +351,52 @@ html {
 
 
 
-span.blood 
-	{ color:#990000;	}
+span.blood { 
+	color:#990000;	
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;    /* 1 pixel black shadow to left, top, right and bottom */
+	font-family: verdana;
+	font-size: 12px;
+}
 
-span.white 
-	{ color:#e6e6e6;	}
+span.white { 
+	color:#e6e6e6;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;    /* 1 pixel black shadow to left, top, right and bottom */
+	font-family: verdana;
+	font-size: 12px;
+}
 
-span.craft 
-	{ color:#b37400;	}
+span.craft { 
+	color:#b37400;	
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;    /* 1 pixel black shadow to left, top, right and bottom */
+	font-family: verdana;
+	font-size: 12px;
+}
 
-span.unique 
-	{ color:#ad835a;	}
+span.unique { 
+	color:#ad835a;	
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;    /* 1 pixel black shadow to left, top, right and bottom */
+	font-family: verdana;
+	font-size: 12px;
+}
 
-span.magic 
-	{ color:#4850B8;	}
+span.magic { 
+	color:#4850B8;	
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;    /* 1 pixel black shadow to left, top, right and bottom */
+	font-family: verdana;
+	font-size: 12px;
+}
 
 span.green { 
 	color:#00f000;	
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;    /* 1 pixel black shadow to left, top, right and bottom */
 	font-family: verdana;
 	font-size: 12px;
+}
+
+span.green2 { 
+	color:#ad835a;	
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;    /* 1 pixel black shadow to left, top, right and bottom */
+	font-family: verdana;
 }
 
 span.blue { 
@@ -425,7 +469,7 @@ a:hover, a:active { color: #FFFFFF; }
 
 #navbar {
 	background-color:#101010;
-	background-image: url(holygrail/gfx/bg-alt2.jpg);
+	background-image: url(gfx/bg-alt2.jpg);
 	width:800px;
 	height:auto;
 	margin-left:auto;
