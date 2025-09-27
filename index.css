@@ -30,6 +30,7 @@ input ~ .tab { display: none }          			/* hide contents */
 #chapter6:checked ~ .tab.chapter5,
 #chapter7:checked ~ .tab.chapter6 { display: block; }
 
+
 /* Show contents only for selected scope/feature tab */
 #features1:checked ~ .tab.features0,
 #features2:checked ~ .tab.features1,
